@@ -1,0 +1,61 @@
+# rest-api-basic
+
+Dự án nhỏ nhằm luyện tập cách thao tác với RESTful API bằng JavaScript thuần (`fetch`).  
+Không dùng framework, không dùng thư viện bên ngoài — chỉ tập trung vào tư duy và cú pháp cơ bản.
+
+## 📁 Cấu trúc thư mục
+
+```
+rest-api-basic/ 
+├── db.json # Dữ liệu mẫu dùng để test 
+├── test.js # File gọi thử các phương thức API 
+└── restful.js # Class RestfulAPI chứa các phương thức CRUD
+```
+
+## 🚀 Mục đích
+
+- Tự học và luyện tập với các thao tác cơ bản với API: **GET**, **POST**, **PUT**, **DELETE**  
+- Làm quen với Promise và `fetch`
+- Viết mã sạch, dễ hiểu, dễ kiểm soát lỗi
+
+## 🔧 Cách sử dụng
+
+1. Khởi chạy server JSON đơn giản bằng `json-server`:
+
+    ```bash
+    npm install -g json-server
+    json-server --watch db.json
+    ```
+
+Mặc định sẽ chạy ở `http://localhost:3000`
+
+2. Trong file test.js, bạn có thể thử gọi:
+
+```js
+import { RestfulAPI } from './restapi.js';
+
+const api = new RestfulAPI('http://localhost:3000/composers');
+
+api.get_all(); // Lấy toàn bộ danh sách
+api.get(1);    // Lấy phần tử thứ 2 (index = 1)
+api.post({ name: "Tchaikovsky", era: "Romantic" });
+api.put(0, { name: "Updated Bach", era: "Baroque" });
+api.delete(2);
+```
+
+## ✅ Yêu cầu
+
+Dữ liệu API là một mảng các object JSON có id
+
+Node.js và json-server đã cài sẵn
+
+## 📚 Gợi ý mở rộng
+- Kiểm tra URL hợp lệ trước khi gọi API
+
+- Viết thêm giao diện HTML đơn giản
+
+- Chuyển sang TypeScript
+
+- Bổ sung xử lý kiểm tra dữ liệu đầu vào
+
+## 📌 Lưu ý: Đây là dự án học tập. Không dùng cho môi trường thực tế sản phẩm.

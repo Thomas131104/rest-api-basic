@@ -1,0 +1,39 @@
+{
+  "Composer": [
+    {
+      "name": "Beethoven",
+      "instruments": [
+        "Piano",
+        "Violin"
+      ]
+    },
+    {
+      "name": "Mozart",
+      "instruments": [
+        "Piano",
+        "Violin",
+        "Viola"
+      ]
+    },
+    {
+      "name": "Bach",
+      "instruments": [
+        "Harpsichord",
+        "Organ",
+        "Violin"
+      ]
+    },
+    {
+      "name": "Paganini",
+      "instruments": [
+        "Violin",
+        "Viola",
+        "Guitar"
+      ]
+    },
+    {
+      "name": "Shostakovich",
+      "instruments": "Piano"
+    }
+  ]
+}
